@@ -11,80 +11,139 @@
             padding: 0;
             background-color: #f0f0f0;
         }
-        .header {
-            background: url('your-background-image-url.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
             text-align: center;
-            padding: 50px 20px;
-        }
-        .header h1 {
             margin: 0;
-            font-size: 2.5em;
+            padding: 0;
         }
-        .header p {
-            font-size: 1.2em;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
         }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            background-color: #fff;
-            padding: 20px;
-        }
-        .feature {
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
             text-align: center;
-            width: 30%;
-        }
-        .feature img {
-            width: 50px;
-            height: 50px;
+            color: #D01144;
+            height: 44px;
+            padding-top: 20px;
         }
         .packages {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .packages h2 {
-            color: #d32f2f;
-        }
-        .package-container {
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+            justify-content: center;
+            gap: 20px;
+            width: 1200px; 
+            height: 800px;   
         }
         .package {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            width: 45%;
-            background-color: #f9f9f9;
-        }
-        .package h3 {
-            color: #d32f2f;
-        }
-        .package p {
-            font-size: 1.2em;
-            color: #d32f2f;
-        }
-        .package ul {
-            list-style: none;
-            padding: 0;
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height: 800px;
             text-align: left;
         }
-        .package ul li {
-            padding: 5px 0;
+        .package-name {
+            position: absolute;
+            background-color: #D01144;
+            font-size: 18px;
+            text-align: center;
+            top: 0px;
+            width: 500px;
+            height: 100px;
+            left: 0px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .package-name h2 {
+            color: #fff;
+        }
+        .price {
+            position: absolute;
+            color: #D01144;
+            text-align: center;
+            top: 60px;
+            left: 100px;
+            width: 300px;
+            height: 80px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            font-weight: 800;
+            font-size: 24px;
+        }
+        .detail {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            top: 150px;
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        .new
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        ul li img {
+            width: 40px;
+            margin-right: 15px;
+        }
+        ul li div {
+            display: flex;
+            flex-direction: column;
+        }
+        ul li strong {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        ul li span {
+            color: #666;
+            font-size: 0.9em;
         }
         .book-now {
+            font-family: 'Open Sans';
+            font-style: normal;
+            position: absolute;
+            top: 725px;
+            left: 50px;
             display: block;
-            width: 100%;
-            text-align: center;
+            width: 80%;
+            height: 40px;
             padding: 10px;
-            background-color: #d32f2f;
-            color: white;
-            text-decoration: none;
+            background-color: #D01144;
+            color: #fff;
+            text-align: center;
+            border: none;
             border-radius: 5px;
-            margin-top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            font-weight: 800;
+        }
+        .book-now:hover {
+            background-color: #D01144;
         }
         .map {
             text-align: center;
@@ -98,59 +157,111 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Merdeka Health Screening Special</h1>
-        <p>31 Aug - 30 Nov | Up to 45% Off</p>
-    </div>
-    <div class="features">
-        <div class="feature">
-            <img src="icon-teleconsultation.png" alt="Teleconsultation">
-            <h3>Free Teleconsultation</h3>
-            <p>We will connect you with a doctor to discuss your results after your screening, free of charge.</p>
-        </div>
-        <div class="feature">
-            <img src="icon-coverage.png" alt="Nationwide Coverage">
-            <h3>Nationwide Coverage</h3>
-            <p>Simply purchase your preferred package and book your slot at any Innoquest branch near you!</p>
-        </div>
-        <div class="feature">
-            <img src="icon-results.png" alt="Digital Results">
-            <h3>Digital Results</h3>
-            <p>Your results will be emailed to you directly for convenient safekeeping!</p>
-        </div>
-    </div>
-    <div class="packages">
-        <h2>Health Screening Packages</h2>
-        <div class="package-container">
+    <div class="container">
+        <div class="title">Health Screening Packages</div>
+        <div class="packages">
             <div class="package">
-                <h3>BASIC PACKAGE</h3>
-                <p><del>RM120</del> RM78</p>
-                <ul>
-                    <li>FBC: Full blood profile and blood cell health check</li>
-                    <li>ESR: Tests inflammation and blood clotting tendencies</li>
-                    <li>LFT: Tests overall liver health</li>
-                    <li>LIP: Tests various cholesterol tendencies</li>
-                    <li>RFT: Tests various kidney health factors</li>
-                    <li>Glucose: Tests diabetes tendencies</li>
-                    <li>Urine FEME: Urine test for general health</li>
-                </ul>
-                <a href="#" class="book-now">Book Now</a>
+                <div class="package-name">
+                    <h2 style="text-align: center;">BASIC PACKAGE</h2>
+                </div>
+                <div class="price">
+                    <span class="original-price">RM130</span><br>RM78
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>
+                            <img src="img/FBC.svg">
+                            <div>
+                                <strong>FBC</strong>
+                                <span>Full blood profile and blood cell health check</span>
+                            </div>
+                        </li>
+                        <li><img src="img/ESR.svg" alt="ESR"><div><strong>ESR</strong><span>Tests inflammation and blood clotting tendencies</span></div></li>
+                        <li><img src="img/LFT.svg" alt="LFT"><div><strong>LFT</strong>Tests overall liver health<span></span></li>
+                        <li><img src="img/LIP.svg" alt="LIP"><div><strong>LIP</strong><span>Tests various cholesterol tendencies</span></li>
+                        <li><img src="img/RFT.svg" alt="RFT"><div><strong>RFT</strong><span>Tests various kidney health factors</span></li>
+                        <li><img src="img/Glucose.svg" alt="Glucose"><div><strong>Glucose</strong><span>Tests diabetes tendencies</span></li>
+                        <li><img src="img/Urine-FEME.svg" alt="Urine FEME"><div><strong>Urine FEME</strong><span>Urine test for general health</span></li>
+                    </ul>
+                </div>
+                <button class="book-now">Book Now</button>
             </div>
             <div class="package">
-                <h3>BASIC+ PACKAGE</h3>
-                <p><del>RM164</del> RM120</p>
-                <ul>
-                    <li>HBA1c: Diabetes testing</li>
-                    <li>Microalbumin Urine: Urine and kidney health test</li>
-                    <li>FBC: Full blood profile and blood cell health check</li>
-                    <li>ESR: Tests inflammation and blood clotting tendencies</li>
-                    <li>LFT: Tests overall liver health</li>
-                    <li>LIP: Tests various cholesterol tendencies</li>
-                    <li>RFT: Tests various kidney health factors</li>
-                    <li>Glucose: Tests diabetes tendencies</li>
-                    <li>Urine FEME: Urine test for general health</li>
-                </ul>
-                <a href="#" class="book-now">Book Now</a>
+                <div class="package-name">
+                    <h2 style="text-align: center;">BASIC+ PACKAGE</h2>
+                </div>
+                <div class="price">
+                    <span class="original-price">RM146</span><br> RM120
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>
+                            <img src="img/HBa1C.svg" alt="HbA1c">
+                            <div>
+                                <strong>HbA1c</strong>
+                                <span>Diabetes testing</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/microalbumin-urine.svg" alt="Microalbumin Urine">
+                            <div>
+                                <strong>Microalbumin Urine</strong>
+                                <span>Urine and kidney health test</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/FBC.svg" alt="FBC">
+                            <div>
+                                <strong>FBC</strong>
+                                <span>Full blood profile and blood cell health check</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/ESR.svg" alt="ESR">
+                            <div>
+                                <strong>ESR</strong>
+                                <span>Tests inflammation and blood clotting tendencies</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/LFT.svg" alt="LFT">
+                            <div>
+                                <strong>LFT</strong>
+                                <span>Tests overall liver health</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/LIP.svg" alt="LIP">
+                            <div>
+                                <strong>LIP</strong>
+                                <span>Tests various cholesterol tendencies</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/RFT.svg" alt="RFT">
+                            <div>
+                                <strong>RFT</strong>
+                                <span>Tests various kidney health factors</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/Glucose.svg" alt="Glucose">
+                            <div>
+                                <strong>Glucose</strong>
+                                <span>Tests diabetes tendencies</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/Urine-FEME.svg" alt="Urine FEME">
+                            <div>
+                                <strong>Urine FEME</strong>
+                                <span>Urine test for general health</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <button class="book-now">Book Now</button>
             </div>
         </div>
     </div>
